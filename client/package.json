@@ -4,7 +4,7 @@
   "description": "The client of url shortener",
   "scripts": {
     "build": "react-scripts build",
-    "start": "react-scripts start"
+    "start": "react-scripts start --port $PORT"
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"
