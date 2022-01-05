@@ -5,7 +5,7 @@ x-defaults: &defaults
 
 services:
   web:
-    command: 'yarn start'
+    # command: 'yarn start'
     # command: 'yarn start:client'
     build:
       context: .

@@ -46,3 +46,27 @@ heroku open # Open in browser
 ## License
 
 This project is [MIT licensed](./LICENSE).
+
+
+# Heroku
+```bash
+APP_NAME=nino-url-shortener
+
+# create app
+heroku apps create $APP_NAME
+docker tag $APP_NAME registry.heroku.com/$APP_NAME/web
+# build image
+docker buildx build --platform linux/amd64 -t $APP_NAME .
+docker tag nino-url-shortener registry.heroku.com/$APP_NAME/web
+# push image
+heroku container:login
+docker push registry.heroku.com/$APP_NAME/web
+heroku container:release web
+# see logs
+heroku logs
+# open app
+heroku open
+```
+
+# Run
+`docker-compose up`
