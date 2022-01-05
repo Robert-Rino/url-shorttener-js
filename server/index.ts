@@ -3,7 +3,7 @@ import cors from 'cors'
 import URL from './features/url'
 
 const app = express()
-const port = process.env.SERVER_PORT || 3001
+const port = process.env.PORT || 3001
 
 app.set('view engine', 'pug')
 app.use(cors())
